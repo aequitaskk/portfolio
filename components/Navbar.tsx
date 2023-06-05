@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsGithub, BsTwitter } from "react-icons/bs";
+import { BsGithub, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 type Props = {};
 
@@ -20,20 +20,29 @@ const Navbar = (props: Props) => {
               <Link href="/">Projects</Link>
             </li>
             <li>
-              <Link href="/">Contact me</Link>
+              <Link href="/">
+                <BsGithub className="text-2xl" />
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <BsLinkedin className="text-2xl" />
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <BsTwitter className="text-2xl" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/"
+                className="border-2 py-2 px-4 rounded-lg hover:bg-white hover:text-black transition font-semibold"
+              >
+                Contact me
+              </Link>
             </li>
           </ul>
-          <div className="flex space-x-6">
-            <Link href="">
-              <BsGithub className="text-2xl" />
-            </Link>
-            <Link href="">
-              <BsTwitter className="text-2xl" />
-            </Link>
-          </div>
-          <button className="border-2 py-2 px-4 hover:bg-white hover:text-black transition font-semibold">
-            Resume
-          </button>
         </div>
       </div>
     </header>

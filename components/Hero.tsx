@@ -8,11 +8,11 @@ const Hero = (props: Props) => {
       <div className='flex'>
         {/* Left */}
         <div>
-
+        
         </div>
         {/* Right */}
         <div>
-          
+
         </div>
       </div>
     </div>
