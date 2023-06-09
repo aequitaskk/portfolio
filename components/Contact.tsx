@@ -1,93 +1,110 @@
 "use client";
 import Image from "next/image";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { z, ZodType } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
-type Props = {};
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
 
-interface IFormInput {
-  Name: string;
-  Email: string;
-  PhoneNumber?: number;
-  Message: string;
-}
+const schema: ZodType<FormData> = z.object({
+  name: z.string().min(3).max(50),
+  email: z.string().email(),
+  phone: z.string().min(10).max(12),
+  message: z.string().min(10).max(1000),
+});
 
-const Contact = (props: Props) => {
+const Contact = () => {
+  const form = useRef(null);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<IFormInput>();
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
-  console.log(errors);
+    reset,
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
+
+  const submitData = async (data: FormData) => {
+    console.log(data);
+
+    await emailjs
+      .send("service_j8l2j6m", "template_c7xc759", data, "L1QeFVbnxqjKT-UR3")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    reset();
+  };
 
   return (
     <div className="max-w-7xl mx-auto mb-24">
       <h2 className="text-3xl font-semibold mb-20">Contact</h2>
-      <div className="flex justify-center ">
-        <div className="flex flex-[1.5] flex-col">Image Here</div>
+      <div className="flex justify-center items-center space-x-48">
+        <div className="flex  flex-col">
+          <Image
+            src="/images/contact_image.png"
+            alt="contact"
+            width={350}
+            height={350}
+          />
+        </div>
 
-        <div className="flex flex-[1.5] flex-col ">
+        <div className="flex flex-col ">
           <form
-            onSubmit={handleSubmit(onSubmit)}
+            ref={form}
             className="flex flex-col space-y-6 text-black"
+            onSubmit={handleSubmit(submitData)}
           >
             <input
               type="text"
               placeholder="Name"
-              {...register("Name", { required: true, maxLength: 30 })}
               className="p-2 rounded-md outline-none"
+              {...register("name")}
             />
-            {errors?.Name?.type === "required" && (
-              <span className="text-sm text-red-400">
-                This field is required
-              </span>
-            )}
-            {errors?.Name?.type === "maxLength" && (
-              <span className="text-sm text-red-400">
-                Max Length is 30 characters
-              </span>
+            {errors.name?.message && (
+              <span className="text-red-400">{errors.name.message}</span>
             )}
 
             <input
               type="text"
               placeholder="Email"
-              {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
               className="p-2 rounded-md outline-none"
+              {...register("email")}
             />
-            {errors?.Email?.type === "required" && (
-              <span className="text-sm text-red-400">
-                This field is required
-              </span>
-            )}
-            {errors?.Email?.type === "pattern" && (
-              <span className="text-sm text-red-400">
-                Invalid email address
-              </span>
+            {errors.email?.message && (
+              <span className="text-red-400">{errors.email.message}</span>
             )}
 
             <input
-              type="tel"
               placeholder="Phone Number"
-              {...register("PhoneNumber", { maxLength: 12 })}
               className="p-2 rounded-md outline-none"
+              {...register("phone")}
             />
-            {errors?.PhoneNumber?.type === "maxLength" && (
-              <span className="text-sm text-red-400">
-                Max Length is 12 characters
-              </span>
+            {errors.phone?.message && (
+              <span className="text-red-400">{errors.phone.message}</span>
             )}
 
             <textarea
               placeholder="Message"
               rows={5}
               cols={50}
-              {...register("Message", { required: true })}
               className="p-2 rounded-md outline-none"
+              {...register("message")}
             />
-            {errors?.Message?.type === "required" && (
-              <span className="text-sm text-red-400">
-                This field is required
-              </span>
+            {errors.message?.message && (
+              <span className="text-red-400">{errors.message.message}</span>
             )}
 
             <button

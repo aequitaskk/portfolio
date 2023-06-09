@@ -16,12 +16,12 @@ const Hero = (props: Props) => {
             Developer based in Rochester, NY.
           </p>
           <ul className="flex space-x-6 pt-4">
-            <li>
+            <li className="hover:scale-125 transition duration-200 ease-out">
               <Link href="https://github.com/aequitaskk" target="_blank">
                 <BsGithub className="text-2xl" />
               </Link>
             </li>
-            <li>
+            <li className="hover:scale-125 transition duration-200 ease-out">
               <Link
                 href="https://www.linkedin.com/in/kohei-kurano-1b5993240/"
                 target="_blank"
@@ -29,7 +29,7 @@ const Hero = (props: Props) => {
                 <BsLinkedin className="text-2xl" />
               </Link>
             </li>
-            <li>
+            <li className="hover:scale-125 transition duration-200 ease-out">
               <Link href="https://twitter.com/aequitaskk" target="_blank">
                 <BsTwitter className="text-2xl" />
               </Link>
@@ -39,7 +39,7 @@ const Hero = (props: Props) => {
 
         {/* Right */}
         <div className="flex flex-1">
-          {/* <Image src="/images/profile.jpg" alt="profile" width="350" height="350" className="rounded-3xl ml-10" /> */}
+          <Image src="/images/profile.jpg" alt="profile" width="350" height="350" className="rounded-3xl ml-10" />
         </div>
       </div>
     </section>
