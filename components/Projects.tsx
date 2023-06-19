@@ -58,21 +58,45 @@ const Projects = (props: Props) => {
           orientation="vertical"
         >
           <Tab label="Netflix Clone" className="text-white" />
-          <Tab label="Shoe e-commerce" className="text-white" />
+          <Tab label="Shoe Store" className="text-white" />
           <Tab label="Coffee Shop" className="text-white" />
-          <Tab label="Portfolio" className="text-white" />
+          <Tab label="Headphone Store" className="text-white" />
         </Tabs>
         <TabPanel value={value} index={0}>
-          <ProjectCard imageUrl="/images/dummy.jpg" title="Netflix Clone" description="netflix description" codeLink="/" demoLink="/"/>
+          <ProjectCard
+            imageUrl="/images/project-netflix.png"
+            title="Netflix Clone"
+            description="netflix description"
+            codeLink="https://github.com/aequitaskk/netflix-clone"
+            demoLink="https://netflix-clone-three-liart.vercel.app/"
+          />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
+          <ProjectCard
+            imageUrl="/images/project-shoestore.png"
+            title="Shoe Store"
+            description="Shoe Store description"
+            codeLink="https://github.com/aequitaskk/shoe-store-frontend"
+            demoLink="https://shoe-store-frontend-beryl-zeta.vercel.app/"
+          />
         </TabPanel>
         <TabPanel value={value} index={2}>
-        <ProjectCard imageUrl="/images/project_coffee.png" title="Coffee Shop" description="coffee shop description" codeLink="/" demoLink="/"/>
+          <ProjectCard
+            imageUrl="/images/project_coffee.png"
+            title="Coffee Shop"
+            description="coffee shop description"
+            codeLink="https://github.com/aequitaskk/cafe-next"
+            demoLink="https://cafe-next.vercel.app/"
+          />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Item Four
+          <ProjectCard
+            imageUrl="/images/project-headphonestore.png"
+            title="Headphone Store"
+            description="Headphone Store description"
+            codeLink="https://github.com/aequitaskk/ecommerce-store"
+            demoLink="https://ecommerce-store-lac.vercel.app/"
+          />
         </TabPanel>
       </Box>
     </section>
