@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto mb-24">
+    <div id="contact" className="max-w-7xl mx-auto mt-20 h-[80vh]">
       <h2 className="text-3xl font-semibold mb-20">Contact</h2>
       <div className="flex justify-center items-center space-x-48">
         <div className="flex  flex-col">

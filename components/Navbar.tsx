@@ -6,7 +6,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <header className="px-20 py-8 sticky top-0 z-50">
+    <header className="px-20 py-4 sticky top-0 z-50 bg-slate-900">
       <div className="flex items-center justify-between">
         <div>
           <Image src="/images/logo.png" alt="logo" width="80" height="80" />
@@ -17,10 +17,10 @@ const Navbar = (props: Props) => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/">About</Link>
+              <Link href="#about">About</Link>
             </li>
             <li>
-              <Link href="/">Projects</Link>
+              <Link href="#projects">Projects</Link>
             </li>
             <li>
               <Link href="https://github.com/aequitaskk" target="_blank">
@@ -35,14 +35,10 @@ const Navbar = (props: Props) => {
                 <BsLinkedin className="text-2xl" />
               </Link>
             </li>
-            <li>
-              <Link href="https://twitter.com/aequitaskk" target="_blank">
-                <BsTwitter className="text-2xl" />
-              </Link>
-            </li>
+
             <li>
               <Link
-                href="/"
+                href="#contact"
                 className="border-2 py-2 px-4 rounded-lg hover:bg-white hover:text-black transition font-semibold"
               >
                 Contact me

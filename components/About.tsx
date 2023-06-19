@@ -6,7 +6,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <section className="max-w-7xl mx-auto h-[85vh] ">
+    <section id="about" className="max-w-7xl mx-auto h-[80vh]">
       <div className="flex">
         {/* Left */}
         <div className="flex-1 mr-10">
