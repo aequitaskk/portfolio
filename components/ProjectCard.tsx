@@ -20,14 +20,16 @@ const ProjectCard = ({
   demoLink,
 }: Props) => {
   return (
-    <div className="flex flex-col lg:px-4">
+    <div className="flex flex-col lg:px-4 text-neutral-100">
       <div className="flex flex-col lg:flex-row pb-4 lg:space-x-4">
-        <h3 className="text-4xl text-neutral-100 font-semibold pb-2 lg:pb-0">{title}</h3>
+        <h3 className="text-4xl text-neutral-100 font-semibold pb-2 lg:pb-0">
+          {title}
+        </h3>
         <div className="pb-2 space-x-4 flex items-center">
           <Link
             href={codeLink}
             target="_blank"
-            className="bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg py-2 px-4 transition duration-200 flex gap-2 items-center"
+            className="bg-sky-500 hover:bg-sky-600 text-neutral-100 font-semibold rounded-lg py-2 px-4 transition duration-200 flex gap-2 items-center"
           >
             <BsGithub className="text-2xl" />
             Code
@@ -35,14 +37,14 @@ const ProjectCard = ({
           <Link
             href={demoLink}
             target="_blank"
-            className="bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg py-2 px-4 transition duration-200 flex gap-2 items-center"
+            className="bg-amber-500 hover:bg-amber-600 text-neutral-100 font-semibold rounded-lg py-2 px-4 transition duration-200 flex gap-2 items-center"
           >
             <BiLinkExternal className="text-2xl" />
             Demo
           </Link>
         </div>
       </div>
-      <p className="text-neutral-100 text-lg pb-8">{description}</p>
+      <div className="text-neutral-100 text-lg pb-8">{description}</div>
       <Image
         src={`${imageUrl}`}
         alt="project image"
