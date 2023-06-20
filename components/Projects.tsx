@@ -34,7 +34,7 @@ const Projects = (props: Props) => {
         {...other}
       >
         {value === index && (
-          <Box sx={{ p: 3 }}>
+          <Box sx={{ px: 3 }}>
             <Typography>{children}</Typography>
           </Box>
         )}
@@ -54,7 +54,7 @@ const Projects = (props: Props) => {
       id="projects"
       className="max-w-7xl mx-auto h-full lg:h-screen px-10 xl:px-0 text-neutral-100"
     >
-      <h2 className="text-3xl font-semibold mb-10  lg:mb-4">Projects</h2>
+      <h2 className="text-3xl font-semibold mb-10  lg:mb-8">Projects</h2>
 
       <Box className="hidden lg:flex px-2 text-neutral-100">
         <Tabs
@@ -63,7 +63,7 @@ const Projects = (props: Props) => {
           variant="scrollable"
           scrollButtons="auto"
           orientation="vertical"
-          className="min-w-[200px] text-neutral-100"
+          className="min-w-[200px] text-neutral-100 bg-neutral-200 h-full rounded-md"
         >
           <Tab label="Netflix Clone" className="text-neutral-100" />
           <Tab label="Shoe Store" className="text-neutral-100" />
