@@ -23,7 +23,7 @@ const Hero = (props: Props) => {
         >
           <h1 className="text-6xl font-bold">Front-End Web Developer</h1>
           <p className="pt-2 font-semibold text-3xl">
-            Hi!👋🏻 <span className="text-rose-400">I'm Kohei</span>. A passionate
+            Hi!👋🏻 <span className="text-rose-400">I&apos;m Kohei</span>. A passionate
             Front-End React/Next Web Developer based in Rochester, NY.
           </p>
           <ul className="flex space-x-6 pt-4">

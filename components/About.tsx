@@ -34,7 +34,7 @@ const About = (props: Props) => {
           <div className="space-y-4 pt-4 pl-2 text-neutral-100">
             <p>
               My name is Kohei Kurano. I am a highly ambitious and
-              self-motivated web developer based in Rochester, NY. I'm
+              self-motivated web developer based in Rochester, NY. I&apos;m
               originally from Japan and moved to the United States in 2016.
             </p>
             <p>
