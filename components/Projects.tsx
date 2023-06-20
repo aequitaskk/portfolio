@@ -52,7 +52,7 @@ const Projects = (props: Props) => {
       }}
       transition={{ duration: 1 }}
       id="projects"
-      className="max-w-7xl mx-auto h-full lg:h-screen px-10 xl:px-0"
+      className="max-w-7xl mx-auto h-full lg:h-screen px-10 xl:px-0 text-white"
     >
       <h2 className="text-3xl font-semibold mb-4">Projects</h2>
 
@@ -63,7 +63,7 @@ const Projects = (props: Props) => {
           variant="scrollable"
           scrollButtons="auto"
           orientation="vertical"
-          className="min-w-[200px]"
+          className="min-w-[200px] text-white"
         >
           <Tab label="Netflix Clone" className="text-white" />
           <Tab label="Shoe Store" className="text-white" />
