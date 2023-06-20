@@ -1,13 +1,23 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import { techStack } from "@/utils/techStack";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 const About = (props: Props) => {
   return (
-    <section id="about" className="max-w-7xl mx-auto h-[80vh]">
-      <div className="flex">
+    <motion.section
+    initial="hidden"
+    whileInView="show"
+    variants={{
+      hidden: { opacity: 0, x:-30 },
+      show: { opacity: 1, x: 0 },
+    }}
+    transition={{ duration: 0.5 }}
+    id="about" className="max-w-7xl mx-auto h-full mb-32 lg:mb-0 lg:h-[80vh]">
+      <div className="flex flex-col px-10 lg:flex-row">
         {/* Left */}
         <div className="flex-1 mr-10">
           <Image
@@ -15,11 +25,11 @@ const About = (props: Props) => {
             alt="about me"
             width={400}
             height={400}
-            className="rounded-lg"
+            className="rounded-lg hidden lg:flex"
           />
         </div>
         {/* Right */}
-        <div className="flex-[2] flex-col">
+        <div className="flex-[2] flex-col ">
           <h2 className="text-3xl font-semibold">About Me</h2>
           <div className="space-y-4 pt-4 pl-2 text-neutral-100">
             <p>
@@ -44,7 +54,7 @@ const About = (props: Props) => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

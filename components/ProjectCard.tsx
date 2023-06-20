@@ -20,9 +20,9 @@ const ProjectCard = ({
   demoLink,
 }: Props) => {
   return (
-    <div className="flex flex-col px-4">
-      <div className="flex pb-4 space-x-4">
-        <h3 className="text-4xl text-neutral-100 font-semibold">{title}</h3>
+    <div className="flex flex-col lg:px-4">
+      <div className="flex flex-col lg:flex-row pb-4 lg:space-x-4">
+        <h3 className="text-4xl text-neutral-100 font-semibold pb-2 lg:pb-0">{title}</h3>
         <div className="pb-2 space-x-4 flex items-center">
           <Link
             href={codeLink}
@@ -50,8 +50,6 @@ const ProjectCard = ({
         height={400}
         className="rounded-md"
       />
-
-      
     </div>
   );
 };
