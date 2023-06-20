@@ -9,7 +9,9 @@ const Navbar = (props: Props) => {
     <header className="px-6 lg:px-20 py-4 sticky top-0 z-50 bg-slate-900">
       <div className="flex items-center justify-between">
         <div>
-          <Image src="/images/logo.png" alt="logo" width="80" height="80" />
+          <Link href="/">
+            <Image src="/images/logo.png" alt="logo" width="80" height="80" />
+          </Link>
         </div>
         <div className="items-center gap-10 pr-10">
           <ul className="flex space-x-10 items-center">
