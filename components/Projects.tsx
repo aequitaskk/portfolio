@@ -56,7 +56,7 @@ const Projects = (props: Props) => {
     >
       <h2 className="text-3xl font-semibold mb-4">Projects</h2>
 
-      <Box className="hidden lg:flex px-2">
+      <Box className="hidden lg:flex px-2 text-neutral-100">
         <Tabs
           value={value}
           onChange={handleChange}
@@ -70,7 +70,7 @@ const Projects = (props: Props) => {
           <Tab label="Coffee Shop" className="text-neutral-100" />
           <Tab label="Headphone Store" className="text-neutral-100" />
         </Tabs>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={0} >
           <ProjectCard
             imageUrl="/images/project-netflix.png"
             title="Netflix Clone"

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React from "react";
 import { techStack } from "@/utils/techStack";
@@ -9,14 +9,16 @@ type Props = {};
 const About = (props: Props) => {
   return (
     <motion.section
-    initial="hidden"
-    whileInView="show"
-    variants={{
-      hidden: { opacity: 0, x:-30 },
-      show: { opacity: 1, x: 0 },
-    }}
-    transition={{ duration: 0.5 }}
-    id="about" className="max-w-7xl mx-auto h-full mb-32 lg:mb-0 lg:h-[80vh]">
+      initial="hidden"
+      whileInView="show"
+      variants={{
+        hidden: { opacity: 0, x: -30 },
+        show: { opacity: 1, x: 0 },
+      }}
+      transition={{ duration: 0.5 }}
+      id="about"
+      className="max-w-7xl mx-auto h-full my-32 lg:my-0 lg:h-[80vh]"
+    >
       <div className="flex flex-col px-10 lg:flex-row">
         {/* Left */}
         <div className="flex-1 mr-10">
