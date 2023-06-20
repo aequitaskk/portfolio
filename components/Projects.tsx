@@ -54,7 +54,7 @@ const Projects = (props: Props) => {
       id="projects"
       className="max-w-7xl mx-auto h-full lg:h-screen px-10 xl:px-0 text-neutral-100"
     >
-      <h2 className="text-3xl font-semibold mb-4">Projects</h2>
+      <h2 className="text-3xl font-semibold mb-10  lg:mb-4">Projects</h2>
 
       <Box className="hidden lg:flex px-2 text-neutral-100">
         <Tabs
@@ -70,7 +70,7 @@ const Projects = (props: Props) => {
           <Tab label="Coffee Shop" className="text-neutral-100" />
           <Tab label="Headphone Store" className="text-neutral-100" />
         </Tabs>
-        <TabPanel value={value} index={0} >
+        <TabPanel value={value} index={0}>
           <ProjectCard
             imageUrl="/images/project-netflix.png"
             title="Netflix Clone"
@@ -107,6 +107,7 @@ const Projects = (props: Props) => {
           />
         </TabPanel>
       </Box>
+
       <div className="flex-col mt-4">
         <div className="lg:hidden space-y-20">
           <ProjectCard
