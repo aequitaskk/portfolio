@@ -69,12 +69,13 @@ const Projects = (props: Props) => {
           <Tab label="Shoe Store" className="text-neutral-100" />
           <Tab label="Coffee Shop" className="text-neutral-100" />
           <Tab label="Headphone Store" className="text-neutral-100" />
+          <Tab label="Baseball Card Website" className="text-neutral-100" />
         </Tabs>
         <TabPanel value={value} index={0}>
           <ProjectCard
             imageUrl="/images/project-netflix.png"
             title="Netflix Clone"
-            description="This is a Netflix clone website that uses the TMDB API to display movies. You can also watch the trailer of the movie by clicking on the movie thumbnail. This project was built using Next.js, TypeScript, Tailwind CSS, and Firebase."
+            description="Netflix clone website that uses the TMDB API to display movies. This project was built using Next.js, TypeScript, Tailwind CSS, and Firebase. I also used Next-Auth to implement authentication."
             codeLink="https://github.com/aequitaskk/netflix-clone"
             demoLink="https://netflix-clone-three-liart.vercel.app/"
           />
@@ -83,7 +84,7 @@ const Projects = (props: Props) => {
           <ProjectCard
             imageUrl="/images/project-shoestore.png"
             title="Shoe Store"
-            description="This is a shoe e-commerce store. This project was built using Next.js, JavaScript, Tailwind CSS Strapi, and Stripe. You can add items to your cart and checkout using Stripe."
+            description="Shoe e-commerce store that was built with Next.js, Tailwind CSS Strapi, and Stripe. You can add items to your cart and checkout using Stripe."
             codeLink="https://github.com/aequitaskk/shoe-store-frontend"
             demoLink="https://shoe-store-frontend-beryl-zeta.vercel.app/"
           />
@@ -92,7 +93,7 @@ const Projects = (props: Props) => {
           <ProjectCard
             imageUrl="/images/project_coffee.png"
             title="Coffee Shop"
-            description="This is a coffee shop website. This project was built using Next.js, JavaScript, Tailwind CSS. I used the Framer Motion library to add animations to the website."
+            description="A coffee shop website that was built using Next.js, Tailwind CSS. I used the Framer Motion library to add animations to the website."
             codeLink="https://github.com/aequitaskk/cafe-next"
             demoLink="https://cafe-next.vercel.app/"
           />
@@ -101,9 +102,18 @@ const Projects = (props: Props) => {
           <ProjectCard
             imageUrl="/images/project-headphonestore.png"
             title="Headphone Store"
-            description="This is a headphone e-commerce store. This project was built using Next.js, JavaScript, Tailwind CSS, and Stripe. You can add items to your cart and checkout using Stripe. I also used Stripe as a CMS."
+            description="A headphone e-commerce store. This project was built using Next.js, Tailwind CSS, and Stripe. You can add items to your cart and checkout using Stripe. Stripe is used for checkout and CMS as well."
             codeLink="https://github.com/aequitaskk/ecommerce-store"
             demoLink="https://ecommerce-store-lac.vercel.app/"
+          />
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          <ProjectCard
+            imageUrl="/images/project-baseballcard.png"
+            title="Baseball Card Website"
+            description="A baseball card website that was built using Next.js and TypeScript. I used the Framer Motion library to add animations to the website."
+            codeLink="https://github.com/aequitaskk/card-website"
+            demoLink="https://card-website-g3zt7xikb-aequitaskk.vercel.app/"
           />
         </TabPanel>
       </Box>
@@ -113,30 +123,37 @@ const Projects = (props: Props) => {
           <ProjectCard
             imageUrl="/images/project-netflix.png"
             title="Netflix Clone"
-            description="This is a Netflix clone website that uses the TMDB API to display movies. You can also watch the trailer of the movie by clicking on the movie thumbnail. This project was built using Next.js, TypeScript, Tailwind CSS, and Firebase."
+            description="Netflix clone website that uses the TMDB API to display movies. This project was built using Next.js, TypeScript, Tailwind CSS, and Firebase. I also used Next-Auth to implement authentication."
             codeLink="https://github.com/aequitaskk/netflix-clone"
             demoLink="https://netflix-clone-three-liart.vercel.app/"
           />
           <ProjectCard
             imageUrl="/images/project-shoestore.png"
             title="Shoe Store"
-            description="This is a shoe e-commerce store. This project was built using Next.js, JavaScript, Tailwind CSS Strapi, and Stripe. You can add items to your cart and checkout using Stripe."
+            description="Shoe e-commerce store that was built with Next.js, Tailwind CSS Strapi, and Stripe. You can add items to your cart and checkout using Stripe."
             codeLink="https://github.com/aequitaskk/shoe-store-frontend"
             demoLink="https://shoe-store-frontend-beryl-zeta.vercel.app/"
           />
           <ProjectCard
             imageUrl="/images/project_coffee.png"
             title="Coffee Shop"
-            description="This is a coffee shop website. This project was built using Next.js, JavaScript, Tailwind CSS. I used the Framer Motion library to add animations to the website."
+            description="A coffee shop website that was built using Next.js, Tailwind CSS. I used the Framer Motion library to add animations to the website."
             codeLink="https://github.com/aequitaskk/cafe-next"
             demoLink="https://cafe-next.vercel.app/"
           />
           <ProjectCard
             imageUrl="/images/project-headphonestore.png"
             title="Headphone Store"
-            description="This is a headphone e-commerce store. This project was built using Next.js, JavaScript, Tailwind CSS, and Stripe. You can add items to your cart and checkout using Stripe. I also used Stripe as a CMS."
+            description="A headphone e-commerce store. This project was built using Next.js, Tailwind CSS, and Stripe. You can add items to your cart and checkout using Stripe. Stripe is used for checkout and CMS as well."
             codeLink="https://github.com/aequitaskk/ecommerce-store"
             demoLink="https://ecommerce-store-lac.vercel.app/"
+          />
+           <ProjectCard
+            imageUrl="/images/project-baseballcard.png"
+            title="Baseball Card Website"
+            description="A baseball card website that was built using Next.js and TypeScript. I used the Framer Motion library to add animations to the website."
+            codeLink="https://github.com/aequitaskk/card-website"
+            demoLink="https://card-website-g3zt7xikb-aequitaskk.vercel.app/"
           />
         </div>
       </div>
