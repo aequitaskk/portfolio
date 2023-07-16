@@ -68,8 +68,9 @@ const Projects = (props: Props) => {
           <Tab label="Netflix Clone" className="text-neutral-100" />
           <Tab label="Shoe Store" className="text-neutral-100" />
           <Tab label="Coffee Shop" className="text-neutral-100" />
-          <Tab label="Headphone Store" className="text-neutral-100" />
+          <Tab label="Shoe Configurator" className="text-neutral-100" />
           <Tab label="Baseball Card Website" className="text-neutral-100" />
+          <Tab label="Headphone Store" className="text-neutral-100" />
         </Tabs>
         <TabPanel value={value} index={0}>
           <ProjectCard
@@ -100,13 +101,14 @@ const Projects = (props: Props) => {
         </TabPanel>
         <TabPanel value={value} index={3}>
           <ProjectCard
-            imageUrl="/images/project-headphonestore.png"
-            title="Headphone Store"
-            description="A headphone e-commerce store. This project was built using Next.js, Tailwind CSS, and Stripe. You can add items to your cart and checkout using Stripe. Stripe is used for checkout and CMS as well."
-            codeLink="https://github.com/aequitaskk/ecommerce-store"
-            demoLink="https://ecommerce-store-lac.vercel.app/"
+            imageUrl="/images/project-shoe-configurator.png"
+            title="Shoe Configurator"
+            description="A shoe configurator that was built using Three.js, React, and TailwindCSS. You can change the color of the shoe and save the shoe image."
+            codeLink="https://github.com/aequitaskk/shoe-configurator"
+            demoLink="https://shoe-configurator-orpin.vercel.app/"
           />
         </TabPanel>
+
         <TabPanel value={value} index={4}>
           <ProjectCard
             imageUrl="/images/project-baseballcard.png"
@@ -114,6 +116,16 @@ const Projects = (props: Props) => {
             description="A baseball card website that was built using Next.js and TypeScript. I used the Framer Motion library to add animations to the website."
             codeLink="https://github.com/aequitaskk/card-website"
             demoLink="https://card-website-g3zt7xikb-aequitaskk.vercel.app/"
+          />
+        </TabPanel>
+
+        <TabPanel value={value} index={5}>
+          <ProjectCard
+            imageUrl="/images/project-headphonestore.png"
+            title="Headphone Store"
+            description="A headphone e-commerce store. This project was built using Next.js, Tailwind CSS, and Stripe. You can add items to your cart and checkout using Stripe. Stripe is used for checkout and CMS as well."
+            codeLink="https://github.com/aequitaskk/ecommerce-store"
+            demoLink="https://ecommerce-store-lac.vercel.app/"
           />
         </TabPanel>
       </Box>
@@ -142,18 +154,26 @@ const Projects = (props: Props) => {
             demoLink="https://cafe-next.vercel.app/"
           />
           <ProjectCard
-            imageUrl="/images/project-headphonestore.png"
-            title="Headphone Store"
-            description="A headphone e-commerce store. This project was built using Next.js, Tailwind CSS, and Stripe. You can add items to your cart and checkout using Stripe. Stripe is used for checkout and CMS as well."
-            codeLink="https://github.com/aequitaskk/ecommerce-store"
-            demoLink="https://ecommerce-store-lac.vercel.app/"
+            imageUrl="/images/project-shoe-configurator.png"
+            title="Shoe Configurator"
+            description="A shoe configurator that was built using Three.js, React, and TailwindCSS. You can change the color of the shoe and save the shoe image."
+            codeLink="https://github.com/aequitaskk/shoe-configurator"
+            demoLink="https://shoe-configurator-orpin.vercel.app/"
           />
-           <ProjectCard
+          <ProjectCard
             imageUrl="/images/project-baseballcard.png"
             title="Baseball Card Website"
             description="A baseball card website that was built using Next.js and TypeScript. I used the Framer Motion library to add animations to the website."
             codeLink="https://github.com/aequitaskk/card-website"
             demoLink="https://card-website-g3zt7xikb-aequitaskk.vercel.app/"
+          />
+
+          <ProjectCard
+            imageUrl="/images/project-headphonestore.png"
+            title="Headphone Store"
+            description="A headphone e-commerce store. This project was built using Next.js, Tailwind CSS, and Stripe. You can add items to your cart and checkout using Stripe. Stripe is used for checkout and CMS as well."
+            codeLink="https://github.com/aequitaskk/ecommerce-store"
+            demoLink="https://ecommerce-store-lac.vercel.app/"
           />
         </div>
       </div>
