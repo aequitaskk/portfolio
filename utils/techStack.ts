@@ -23,4 +23,8 @@ export const techStack = [
     name: "TypeScript",
     icon: "/images/typescript.png",
   },
+  {
+    name: "Three.js",
+    icon: "/images/threejs.png",
+  },
 ];
